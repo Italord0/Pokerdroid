@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "328899176977",
+    "project_id": "pokerdroid-e3e47",
+    "storage_bucket": "pokerdroid-e3e47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:328899176977:android:07e3811148f827627ddfb0",
+        "android_client_info": {
+          "package_name": "com.italo.pokerdroid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "328899176977-53fpcfaj1cjgrkutvgc11pj0ovui925k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb16nY-nmXy5nmyyHhM4p6_zlCF8wS05E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "328899176977-53fpcfaj1cjgrkutvgc11pj0ovui925k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
