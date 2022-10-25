@@ -22,7 +22,7 @@ class MainViewModel(
         getVotes()
     }
 
-    private fun getVotes(){
+    private fun getVotes() {
         viewModelScope.launch {
             _gameState.emitAll(
                 votesRepository.getVotes().map(::handleShowVotes)
@@ -35,24 +35,24 @@ class MainViewModel(
         }
     }
 
-    private fun handleShowVotes(showVotes: Boolean?) : GameState{
+    private fun handleShowVotes(showVotes: Boolean?): GameState {
         return gameState.value.copy(showVotes = showVotes)
     }
 
-    private fun handleUsers(users : List<User>?) : GameState {
+    private fun handleUsers(users: List<User>): GameState {
         return gameState.value.copy(users = users)
     }
 
-    fun vote(userId : String, vote : Int){
-        // call repository to vote
+    fun vote(userId: String, vote: Int) {
+        votesRepository.vote(userId,vote.toLong())
     }
 
-    fun showVotes(){
-        // call repository to show votes
+    fun showVotes() {
+        votesRepository.showVotes()
     }
 
-    fun resetVotes(){
-        // call repository to reset votes
+    fun resetVotes() {
+        votesRepository.resetVotes()
     }
 
 }
