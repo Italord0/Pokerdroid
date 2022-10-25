@@ -17,6 +17,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -147,10 +148,12 @@ class MainActivity : ComponentActivity() {
                             Text(
                                 text = fibonacci(fibonacciSeed).toString(),
                                 style = TextStyle(color = Color.White, fontSize = 20.sp),
+                                textAlign = TextAlign.Center,
                                 modifier = Modifier.constrainAs(voteText) {
                                     bottom.linkTo(parent.bottom, 16.dp)
-                                    start.linkTo(subtractButton.end,30.dp)
+                                    start.linkTo(subtractButton.end,15.dp)
                                     top.linkTo(playersList.bottom,10.dp)
+                                    width = Dimension.value(30.dp)
                                     visibility = if (gameState.showVotes == true) Visibility.Gone else Visibility.Visible
                                 }
                             )
@@ -165,7 +168,7 @@ class MainActivity : ComponentActivity() {
                                     backgroundColor = Color.White,
                                     contentColor = Color.Black
                                 ),
-                                onClick = { if (fibonacciSeed in 3..90) fibonacciSeed-- }) {
+                                onClick = { if (fibonacciSeed in 3..11) fibonacciSeed-- }) {
                                 Text(
                                     text = "-",
                                     style = TextStyle(fontSize = 20.sp, color = Color.Red)
@@ -173,7 +176,7 @@ class MainActivity : ComponentActivity() {
                             }
                             Button(
                                 modifier = Modifier.constrainAs(increaseButton) {
-                                    start.linkTo(voteText.end,30.dp)
+                                    start.linkTo(voteText.end,15.dp)
                                     top.linkTo(playersList.bottom,10.dp)
                                     bottom.linkTo(parent.bottom,10.dp)
                                     visibility = if (gameState.showVotes == true) Visibility.Gone else Visibility.Visible
@@ -182,7 +185,7 @@ class MainActivity : ComponentActivity() {
                                     backgroundColor = Color.White,
                                     contentColor = Color.Black
                                 ),
-                                onClick = { if (fibonacciSeed in 2..90) fibonacciSeed++ }) {
+                                onClick = { if (fibonacciSeed in 2..10) fibonacciSeed++ }) {
                                 Text(
                                     text = "+",
                                     style = TextStyle(fontSize = 20.sp, color = Color.Green)
