@@ -74,4 +74,6 @@ dependencies {
     implementation "io.insert-koin:koin-androidx-compose:$koin_version"
     testImplementation "io.insert-koin:koin-test:$koin_version"
     testImplementation "io.insert-koin:koin-test-junit4:$koin_version"
+
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
 }

@@ -25,6 +25,7 @@ import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.Dimension
 import androidx.constraintlayout.compose.Visibility
 import com.google.firebase.firestore.FirebaseFirestore
+import com.italo.pokerdroid.data.Preferences
 import com.italo.pokerdroid.data.model.GameState
 import com.italo.pokerdroid.data.model.User
 import com.italo.pokerdroid.ui.MainViewModel
@@ -113,6 +114,7 @@ class MainActivity : ComponentActivity() {
                                             vote = 0,
                                             voted = false
                                         )
+                                        Preferences.set("User",userJoined)
                                     }
                                 },
                                 colors = ButtonDefaults.buttonColors(
